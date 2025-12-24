@@ -206,9 +206,67 @@ nav .navlinks li a{
 {
     .container{
         flex-direction: column;
-        padding-top:2rem
+        padding-top: 1rem;
+        text-align: center;
     }
     .hero-text{
-        padding:40px 0px;
+        padding: 30px 0px;
+    }
+    .hero-text h1{
+        font-size: 2.5rem;
+    }
+    .hero-text p{
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+    .hero-pic{
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .btn-group{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .btn-group .btn{
+        width: 80%;
+        max-width: 250px;
+        margin: 0;
+    }
+    .social{
+        margin-top: 20px;
+    }
+    .social i{
+        font-size: 24px !important;
+        margin: 0 15px !important;
+    }
+}
+@media(max-width:480px)
+{
+    .wrapper{
+        padding: 0 10px;
+    }
+    .hero-text h1{
+        font-size: 2rem;
+    }
+    .hero-text h5{
+        font-size: 0.9rem;
+    }
+    .hero-pic{
+        width: 200px !important;
+        height: 200px !important;
+    }
+    nav .navlinks{
+        width: 100%;
+    }
+    .logo i{
+        height: 35px;
+        width: 35px;
+        font-size: 1.2rem;
+    }
+    .logo .logo-text{
+        font-size: 20px;
     }
 }

@@ -97,7 +97,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -113,6 +113,13 @@
     \href{https://github.com/...}{\underline{github.com/aloosi}}
 \end{center}
 
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\resumeItemListStart
+\resumeItem{Computer science graduate with project-based backend experience in Go, SQL, and modern web stacks.}
+\resumeItem{Built end-to-end systems involving REST APIs, relational data modeling, authentication, and admin tooling.}
+\resumeItem{Professional background in data analytics, delivering automated KPI pipelines and high-usage dashboards.}
+\resumeItemListEnd
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -121,7 +128,7 @@
       {Toronto Metropolitan University}{Toronto, ON}
       {Bachelor of Science in Computer Science}{Sep. 2019 -- May 2025}
     \resumeItemListStart
-        \resumeItem{Relevant Courses: Databases, Data Science, Data Mining, Algorithms,  Software Engineering, Web Dev.}
+        \resumeItem{Relevant Courses: Databases, Algorithms, Software Engineering, Web Development}
     \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -130,27 +137,30 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-    \textbf{Languages}{: Python, SQL, Go, Java, JavaScript, HTML/CSS} \\
-    \textbf{Frameworks and Libraries}{: React, Node.js, Gin, Flask, pandas, NumPy, Matplotlib, scikit-learn} \\
-    \textbf{Tools and Platforms}{: Power BI, Excel, Snowflake, SAP, Jupyter Notebooks, Salesforce, AWS (EC2, RDS)}
+    \textbf{Languages}{: Go, Python, SQL, JavaScript} \\
+    \textbf{Backend}{: Gin, Flask, REST APIs, JWT, RBAC} \\
+    \textbf{Data}{: PostgreSQL, Snowflake, Data Modeling} \\
+    \textbf{Cloud \& DevOps}{: AWS (EC2, RDS, S3, Lambda), Docker, Kubernetes} \\
+    \textbf{Visualization}{: PowerBI}
     }}
 \end{itemize}
  
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {Data Analyst}{Aug. 2023 -- Present}
+      {Parental Leave}{Oct. 2025 -- Present}
+      {}{}
+      
+    \resumeSubheading
+      {Data Analytics Engineer}{Aug. 2023 -- Oct. 2025}
       {Signify Lighting}{Markham, ON}
-       \resumeItemListStart
-            \resumeItem{Automated KPI tracking for rebate disputes, achieving a \textbf{33\% Quarter-Over-Quarter improvement} in resolution rates, reducing financial exposure by approximately \textbf{\$615 million}.}
-            \resumeItem{Built and deployed an \textbf{Order Intake Power BI Dashboard} ranked in the \textbf{99.8th percentile} of organizational usage (13th out of 6,505 reports).}
-            \resumeItem{\textbf{Enhanced report data fetching efficiency by 300\%} through optimized Snowflake views, reducing Power BI report load times for global sales data.}
-            \resumeItem{Designed and maintained \textbf{cross-departmental KPI dashboards} in Power BI, enabling real-time insights for decision-making.}
-            \resumeItem{Mentored team members weekly on Power BI, optimizing workflows and introducing prompt-engineering techniques for improved productivity.}
-            \resumeItem{Responsible for Power BI development and ownership of several high-impact dashboards, including \textbf{Daily Order Intake}, \textbf{US SIP Speedometer}, \textbf{Sales 360}, \textbf{End User Sales}, \textbf{NA One Public}, and \textbf{Agent Commissions} dashboards.}
-  \resumeItemListEnd
+      \resumeItemListStart
+    \resumeItem{Automated KPI tracking for rebate disputes, improving resolution rates by \textbf{33\% QoQ} and reducing exposure tied to processing errors (estimated risk impact \textbf{\$615M}).}
+\resumeItem{Developed and maintained an enterprise \textbf{Order Intake Power BI dashboard} ranked in the \textbf{top 0.2\%} of organizational usage (13 of 6,505 reports).}
+\resumeItem{Optimized Snowflake queries and data models, reducing Power BI load times for N.A. sales dashboards by \textbf{45 minutes}.}
+\resumeItem{Designed and deployed cross-departmental KPI dashboards used by sales, supply chain, and finance teams.}
+\resumeItemListEnd
 
 
   \resumeSubHeadingListEnd
@@ -159,37 +169,30 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+
       \resumeProjectHeading
           {\textbf{Travel Agency Reservation System} $|$ \emph{Go, React, AWS}}{}
           \resumeItemListStart
-            \resumeItem{Developed a full-stack web application for managing travel bookings, handling over 500 requests per second with real-time updates.}
-            \resumeItem{Implemented RESTful APIs using Go and Gin, deployed on AWS with autoscaling and RDS for high availability and performance.}
-            \resumeItem{Optimized query performance and ensured data consistency with Redis caching, reducing response times by 20\%.}
+          \small{
+            \resumeItem{Built a full-stack reservation system with a Go (Gin) backend and React frontend, supporting concurrent booking requests and real-time status updates.}
+            \resumeItem{Implemented RESTful APIs and deployed the service on AWS EC2 with a Postgres-backed data layer.}
+            \resumeItem{Added Redis-based caching using a cache-aside pattern, reducing repeated database queries and improving response times.}
+            \resumeItem{Used k6 to load-test key endpoints and validate stable performance under simulated concurrent users.}
+            }
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Dog Breed Identification Web App} $|$ \emph{Flask, YOLOv8, AWS}}{}
+          {\textbf{BrightPixel Online Service Store Platform} $|$ \emph{Go, Next.js, PostgreSQL}}{}
           \resumeItemListStart
-            \resumeItem{Built a real-time web app for dog breed identification using YOLOv8, with a 92.7\% accuracy rate, capable of processing up to 200 concurrent uploads.}
-            \resumeItem{Optimized model inference using TensorRT on AWS EC2 with GPU support, achieving 99.9\% uptime through autoscaling.}
-            \resumeItem{Enhanced user experience with asynchronous API requests, reducing latency and improving throughput.}
-          \resumeItemListEnd
-          
-      \resumeProjectHeading
-          {\textbf{Student Registry Simulator} $|$ \emph{Java}}{}
-          \resumeItemListStart
-            \resumeItem{Developed a Java-based student registry with CRUD functionality, using ArrayLists and HashMaps for efficient data management.}
-            \resumeItem{Implemented binary search for optimized student lookup and robust error handling for improved reliability and user experience.}
+          \small{
+            \resumeItem{Designed and built a \textbf{full-stack e-commerce platform} with a Go (Gin) backend and Next.js frontend, implementing \textbf{50+ RESTful API endpoints} across \textbf{8 core domains} including products, orders, payments, reviews, stores, delivery, and authentication.}
+            \resumeItem{Architected a \textbf{PostgreSQL relational schema with 15+ tables}, supporting multi-store inventory management, order lifecycles, and transactional payment workflows.}
+            \resumeItem{Implemented \textbf{JWT-based authentication and role-based access control (RBAC)}, securing admin-only endpoints and supporting concurrent user sessions.}
+            \resumeItem{Built an \textbf{admin dashboard} for product catalog management, order fulfillment, payment processing with discount codes and gift cards, and review moderation across multiple store locations.}
+            \resumeItem{Wrote \textbf{unit and integration tests using testify}, validating authentication flows and critical business logic to ensure API reliability.}
+            }
           \resumeItemListEnd
 
-      \resumeProjectHeading
-          {\textbf{La Shawarma Store Website} $|$ \emph{WordPress, HTML/CSS, SEO}}{}
-          \resumeItemListStart
-            \resumeItem{Developed a responsive and SEO-optimized website using WordPress and custom HTML/CSS, increasing La Shawarma's online presence and customer engagement by 40\%.}
-            \resumeItem{Integrated an online ordering feature and social media links, enhancing customer accessibility and driving traffic from local search results.}
-            \resumeItem{Configured Google Analytics for tracking user interactions and website traffic, providing data-driven insights to improve user engagement and conversion rates.}
-          \resumeItemListEnd
-          
     \resumeSubHeadingListEnd
 
 %-------------------------------------------
