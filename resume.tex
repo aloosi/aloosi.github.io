@@ -20,31 +20,18 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+% Adjust margins for maximum page usage
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 
@@ -52,10 +39,10 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Sections formatting (tightened vertical space)
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -76,13 +63,6 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -90,18 +70,14 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
+% Tightened list spacing commands
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1pt, parsep=0pt, topsep=1pt, partopsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 
@@ -127,11 +103,7 @@
     \resumeSubheading
       {Toronto Metropolitan University}{Toronto, ON}
       {Bachelor of Science in Computer Science}{Sep. 2019 -- May 2025}
-    \resumeItemListStart
-        \resumeItem{Relevant Courses: Databases, Algorithms, Software Engineering, Web Development}
-    \resumeItemListEnd
   \resumeSubHeadingListEnd
-
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
@@ -140,8 +112,7 @@
     \textbf{Languages}{: Go, Python, SQL, JavaScript} \\
     \textbf{Backend}{: Gin, Flask, REST APIs, JWT, RBAC} \\
     \textbf{Data}{: PostgreSQL, Snowflake, Data Modeling} \\
-    \textbf{Cloud \& DevOps}{: AWS (EC2, RDS, S3, Lambda), Docker, Kubernetes} \\
-    \textbf{Visualization}{: PowerBI}
+    \textbf{Cloud \& DevOps}{: AWS (EC2, RDS, S3, Lambda), Docker, Kubernetes}
     }}
 \end{itemize}
  
@@ -156,15 +127,12 @@
       {Data Analytics Engineer}{Aug. 2023 -- Oct. 2025}
       {Signify Lighting}{Markham, ON}
       \resumeItemListStart
-    \resumeItem{Automated KPI tracking for rebate disputes, improving resolution rates by \textbf{33\% QoQ} and reducing exposure tied to processing errors (estimated risk impact \textbf{\$615M}).}
-\resumeItem{Developed and maintained an enterprise \textbf{Order Intake Power BI dashboard} ranked in the \textbf{top 0.2\%} of organizational usage (13 of 6,505 reports).}
-\resumeItem{Optimized Snowflake queries and data models, reducing Power BI load times for N.A. sales dashboards by \textbf{45 minutes}.}
-\resumeItem{Designed and deployed cross-departmental KPI dashboards used by sales, supply chain, and finance teams.}
-\resumeItemListEnd
-
-
+        \resumeItem{Automated KPI tracking for rebate disputes, improving resolution rates by \textbf{33\% QoQ} and reducing exposure tied to processing errors (estimated risk impact \textbf{\$615M}).}
+        \resumeItem{Developed and maintained an enterprise \textbf{Order Intake Power BI dashboard} ranked in the \textbf{top 0.2\%} of organizational usage (13 of 6,505 reports).}
+        \resumeItem{Optimized Snowflake queries and data models, reducing Power BI load times for N.A. sales dashboards by \textbf{45 minutes}.}
+        \resumeItem{Designed and deployed cross-departmental KPI dashboards used by sales, supply chain, and finance teams.}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
-
 
 %-----------PROJECTS-----------
 \section{Projects}
@@ -173,24 +141,30 @@
       \resumeProjectHeading
           {\textbf{Travel Agency Reservation System} $|$ \emph{Go, React, AWS}}{}
           \resumeItemListStart
-          \small{
             \resumeItem{Built a full-stack reservation system with a Go (Gin) backend and React frontend, supporting concurrent booking requests and real-time status updates.}
             \resumeItem{Implemented RESTful APIs and deployed the service on AWS EC2 with a Postgres-backed data layer.}
             \resumeItem{Added Redis-based caching using a cache-aside pattern, reducing repeated database queries and improving response times.}
             \resumeItem{Used k6 to load-test key endpoints and validate stable performance under simulated concurrent users.}
-            }
           \resumeItemListEnd
 
       \resumeProjectHeading
           {\textbf{BrightPixel Online Service Store Platform} $|$ \emph{Go, Next.js, PostgreSQL}}{}
           \resumeItemListStart
-          \small{
             \resumeItem{Designed and built a \textbf{full-stack e-commerce platform} with a Go (Gin) backend and Next.js frontend, implementing \textbf{50+ RESTful API endpoints} across \textbf{8 core domains} including products, orders, payments, reviews, stores, delivery, and authentication.}
             \resumeItem{Architected a \textbf{PostgreSQL relational schema with 15+ tables}, supporting multi-store inventory management, order lifecycles, and transactional payment workflows.}
             \resumeItem{Implemented \textbf{JWT-based authentication and role-based access control (RBAC)}, securing admin-only endpoints and supporting concurrent user sessions.}
             \resumeItem{Built an \textbf{admin dashboard} for product catalog management, order fulfillment, payment processing with discount codes and gift cards, and review moderation across multiple store locations.}
             \resumeItem{Wrote \textbf{unit and integration tests using testify}, validating authentication flows and critical business logic to ensure API reliability.}
-            }
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Alexa Brown Noise Skill} $|$ \emph{Python, Alexa ASK SDK, AWS (Lambda, S3, Budgets)}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered a voice-activated Alexa Skill using \textbf{Python} and the \textbf{ASK SDK} to provide high-fidelity brown noise streaming with integrated play/pause/resume functionality.}
+            \resumeItem{Deployed a serverless backend on \textbf{AWS Lambda} to process custom intents and manage skill session states, maintaining a \textbf{sub-500ms execution latency}.}
+            \resumeItem{Optimized audio delivery by hosting assets on \textbf{AWS S3}, ensuring high-availability and low-latency streaming for concurrent Alexa devices.}
+            \resumeItem{Implemented proactive \textbf{AWS Budgeting and billing alarms} to monitor resource consumption, successfully maintaining \textbf{100\% cost-efficiency} within the Free Tier thresholds.}
+            \resumeItem{Managed end-to-end integration between the Amazon Developer Console and Lambda APIs, including secure IAM role configuration and endpoint validation.}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
