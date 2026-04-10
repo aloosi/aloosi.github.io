@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Ahmad Aloosi</title>
-    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" type="image/x-icon" href="../../static/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <!-- Same header as other pages -->
             <div class="logo">
                 <i class="fa-solid fa-a"></i>
                 <div class="logo-text"></div>
@@ -24,11 +23,10 @@
                     <span></span>
                 </div>
                 <ul class="navlinks">
-                    <li><a href="index.html">Home</a></li>
-                    <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
-                    <li><a href="resume.html">Resume</a></li>
-                    <!-- <li><a href="blog.html">Blog</a></li> -->
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../devlogs/index.html">Dev Logs</a></li>
+                    <li><a href="../resume/index.html">Resume</a></li>
+                    <li><a href="index.html" class="active">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -43,16 +41,16 @@
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/aloosi" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/aloosi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-github"></i>
-                        <a href="https://github.com/aloosi" target="_blank">GitHub</a>
+                        <a href="https://github.com/aloosi" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
                 <form class="contact-form" action="https://formsubmit.co/ahmad@aloosi.ca" method="POST">
                     <input type="hidden" name="_subject" value="New Contact Form Submission">
-                    <input type="hidden" name="_next" value="https://aloosi.github.io/thank-you.html">
+                    <input type="hidden" name="_next" value="https://aloosi.ca/pages/thank-you/index.html">
                     <input type="hidden" name="_captcha" value="true">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -71,6 +69,7 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="../../script.js"></script>
 </body>
 </html>
+
